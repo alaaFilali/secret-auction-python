@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تمرين برنامج الدرجات</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">تمرين برنامج الدرجات</h1>
+        <div class="content">
+            <p>
+                اتمنى انك فهمت جيدا الدرس السابق و انت جاهز لتضع ماتعلمته
+                تحت الاختبار بحيث سوف نقوم ببناء برنامج الدرجات
+            </p>
+            <p>
+                التعليمات:
+            </p>
+            <p>
+                لديك وصول لقاعدة بيانات لدرجات التلاميذ على شكل قاموس
+                dictionary
+                المفاتيح فيه هي اسماء التلاميذ والقيم هي درجاتهم
+            </p>
+            <pre><code>
+student_scores = {
+    "Alaa": 81,
+    "Aymen": 78,
+    "Kais": 99,
+    "Yousef": 74,
+    "Omar": 62,
+}
+            </code></pre>
+            <p>
+                اكتب برنامج يحول العلامات الى درجات لغوية وبنهاية تمرين اليوم يجب
+                ان يكون هناك قاموس جديد يسمى
+                student_grades
+                يحتوي على الاسماء كمفاتيح والعلامات اللغوية كقيم وهذه هي المتطلبات:
+            </p>
+            <ul>
+                <li>
+                    الدرجة من
+                    91
+                    الى
+                    100
+                    الجملة:
+                    <strong>"Outstanding"</strong>
+                </li>
+                <li>
+                    الدرجة من
+                    81
+                    الى
+                    90
+                    الجملة:
+                    <strong>"Exceeds Expectations"</strong>
+                </li>
+                <li>
+                    الدرجة من
+                    71
+                    الى
+                    80
+                    الجملة:
+                    <strong>"Acceptable"</strong>
+                </li>
+                <li>
+                    الدرجة
+                    70
+                    الو اقل
+                    الجملة:
+                    <strong>"Fail"</strong>
+                </li>
+            </ul>
+            <p>
+                ثم في الاخير قم بطباعة ال
+                dict
+                الجديد
+            </p>
+            <p>
+                حظا موفقا.
+            </p>
+            <p>
+                اولا علينا او نقوم بصناعة
+                dict
+                جديد فارغ يسمى
+                student_grades
+            </p>
+            <pre><code>
+student_grades = {}
+            </code></pre>
+            <p>
+                ثم نضيف اليها الثنائيات الاسم والعلامة اللغوية بدل العلامة العددية
+                والفكرة هنا ان نستعمل حلقة
+                for
+                من اجل كل
+                student
+                في
+                student_scores
+                تذكر انه سوف يعطينا المفاتيح ونحن نريد القيم لنقوم بعمل مقارنة
+                وذلك من خلال تمرير المفتاح الى
+                student_scores
+                ثم حفظه في متغير
+                score
+                ثم ببساطة نقارن على حسب المتطلات المذكورة سابقا
+                ونضيف الى ال
+                dict
+                الجديد
+                student_grades
+                بتمرير
+                student
+                كمفتاح و القيمة الجديدة
+            </p>
+            <pre><code>
+for student in student_scores:
+    score = student_scores[student]
+    if score > 90:
+        student_grades[student] = "Outstanding"
+    elif score > 80:
+        student_grades[student] = "Exceeds Expectations"
+    elif score > 70:
+        student_grades[student] = "Acceptable"
+    else:
+        student_grades[student] = "Fail"
+            </code></pre>
+            <p>الحل كاملا: </p>
+            <pre><code>
+student_scores = {
+    "Alaa": 81,
+    "Aymen": 78,
+    "Kais": 99,
+    "Yousef": 74,
+    "Omar": 62,
+} 
+
+student_grades = {}
+
+for student in student_scores:
+    score = student_scores[student]
+    if score > 90:
+        student_grades[student] = "Outstanding"
+    elif score > 80:
+        student_grades[student] = "Exceeds Expectations"
+    elif score > 70:
+        student_grades[student] = "Acceptable"
+    else:
+        student_grades[student] = "Fail"
+
+print(student_grades)
+            </code></pre>
+            <p>نتيجة الكود: </p>
+            <pre><code>
+{
+    'Alaa': 'Exceeds Expectations',
+    'Aymen': 'Acceptable',
+    'Kais': 'Outstanding',
+    'Yousef': 'Acceptable',
+    'Omar': 'Fail'
+}
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
