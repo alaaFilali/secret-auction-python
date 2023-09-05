@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تمرين قاموس داخل قائمة</title>
+</head>
+
+<body>
+    <div class="book-page">
+        <h1 class="book-title">تمرين قاموس داخل قائمة</h1>
+        <div class="content">
+            <p>
+                التعليمات:
+            </p>
+            <p>
+                سوف نقوم بكتابة برنامج يقوم بالاضافة الى ال
+                travel_log
+                وهو عبارة عن قائمة تحتوي على قاموسين من الدرس السابق
+            </p>
+            <pre><code>
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 10,
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart",
+        "total_visits": 12,
+    },
+]
+            </code></pre>
+            <p>
+                اكتب دالة التي تتيح لك اضافة زيارات الى ال
+                travel_log
+                مثلا لو زرت روسيا والامامكن التي زرتها هي
+                Moscow, Saint Petersburg
+                وعدد مرات الزيارة هو
+                2
+                تقوم بمنادات الدالة هكذا:
+            </p>
+            <pre><code>
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+            </code></pre>
+            <p>
+                وعندما تقوم بطباعة ال
+                travel_log
+            </p>
+            <pre><code>
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 10,
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 12,
+    },
+    {
+        "country": "Russia",
+        "cities_visited": ["Moscow", "Saint Petersburg"],
+        "total_visits": 2,
+    },
+]
+            </code></pre>
+            <p>
+                حظا موفقا في حل التمرين.
+            </p>
+            <p>
+                حل التمرين:
+            </p>
+            <pre><code>
+def add_new_country(country_visited, times_visited, cities_visited):
+    new_country = {}
+    new_country["country"] = country_visited
+    new_country["cities_visited"] = cities_visited
+    new_country["total_visits"] = times_visited
+    travel_log.append(new_country)
+            </code></pre>
+            <p>
+                عرفنا دالة جديدة تسمى 
+                add_new_country
+                تأخد
+                3
+                مدخلات:
+                <strong>
+                 الدولة وعدد الزيارات والاماكن التي زرتها
+                </strong>
+                 وماتفعله هذه الدالة هو 
+                انها تحول هذه المدخلات الى قاموس ثم تضيفها الى قائمة ال 
+                travel_log
+            </p>
+            <p>
+                الكود كاملا: 
+            </p>
+            <pre><code>
+travel_log = [
+    {
+        "country": "France",
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 10,
+    },
+    {
+        "country": "Germany",
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart",
+        "total_visits": 12,
+    },
+]
+
+
+def add_new_country(country_visited, times_visited, cities_visited):
+    new_country = {}
+    new_country["country"] = country_visited
+    new_country["cities_visited"] = cities_visited
+    new_country["total_visits"] = times_visited
+    travel_log.append(new_country)
+
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
+            </code></pre>
+        </div>
+    </div>
+</body>
+
+</html>
