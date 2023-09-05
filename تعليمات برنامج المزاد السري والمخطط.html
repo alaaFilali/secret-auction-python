@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>تعليمات برنامج المزاد السري والمخطط</title>
+</head>
+
+<body>
+
+    <style>
+        img {
+            max-width: 100%;
+            /* Limits the image to the width of its parent container */
+            height: auto;
+            /* Maintains the aspect ratio */
+        }
+
+        .image-container {
+            max-width: 80%;
+            /* Adjust the maximum width as needed */
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+    </style>
+
+    <div class="book-page">
+        <h1 class="book-title">تعليمات برنامج المزاد السري والمخطط</h1>
+        <div class="content">
+            <p>
+                الان بعد ما تعلمنا حول القواميس في بايثون سوف نقوم ببناء برنامج مزاد
+                اعمى
+                blind auction
+            </p>
+            <p>
+                سوف يبدأ البرناج كالتالي:
+            </p>
+            <pre><code>
+                ___________
+                \         /
+                 )_______(
+                 |"""""""|_.-._,.---------.,_.-._
+                 |       | | |               | | ''-.
+                 |       |_| |_             _| |_..-'
+                 |_______| '-' `'---------'` '-'
+                 )"""""""(
+                /_________\
+              .-------------.
+             /_______________\
+
+What is your name?: Alaa
+What is your bid?: $200
+Are there any other bidders? Type 'yes or 'no'.
+            </code></pre>
+            <p>
+                سوف يسأل عن اسم المزايد الاول وعن المبلغ الذي يريد ان يزايد يه
+                ثم يسأل هل هناك مزايدون اخرون فاذا كانت الاجابة
+                yes
+                سوف يتم مسح الشاشة والسؤال مرة اخرى عن اسم المزايد وقيمة المزايدة
+                وهكذا حتى لا يوجد هناك مزايدون
+                ويتم اختيار
+                no
+            </p>
+            <p>
+                في تلك الحالة سوف يتم اختيار صاحب اعلى قيمة وهو الفائز في المزاد
+            </p>
+            <pre><code>
+What is your name?: Aboubakr
+What is your bid?: $300
+Are there any other bidders? Type 'yes or 'no'.
+no
+The winner is Aboubakr with a bid of $300
+            </code></pre>
+            <p>
+                الان سوف نرى كيف نقوم بمسح الشاشة فهذا شيء جديد علينا فاذا كنت تستخدم
+                replit
+                فيمكنك عمل
+                import
+                لمكتبة
+                replit
+                وفيها دالة تسمى
+                clear
+                قم بمناداتها في كل مرة تريد مسح الشاشة
+            </p>
+            <pre><code>
+from replit import clear
+clear()
+            </code></pre>
+            <p>
+                اما اذا كنت تستعمل محرر اكواد اخر يمكنك عمل
+                import
+                لمكتبة
+                os
+                ومنادات الدالة
+                system
+                وتمرير الكلمة
+                "clear"
+                ان كنت تستعمل
+                mac
+                او
+                linux
+            </p>
+            <pre><code>
+import os
+os.system("clear")
+            </code></pre>
+            <p>
+                اما في
+                windows
+                الكلمة
+                "cls"
+            </p>
+            <pre><code>
+import os
+os.system("cls")
+            </code></pre>
+            <p>
+                واهم شيء هو اريدك ان تصنع قاموس واسماء الاشخاص هي المفاتيح
+                قيمة المزايدة هي القيمة لكل مفتاح وفي نهاية البرنامج عندما يدخل الجميع
+                قيم المزايدة سوف ندور حول هذا القاموس ونجد اكبر مزايد
+            </p>
+            <p>
+                الان اذهب واصنع مخطط خاص بك للبرنامج الذي سوف تبنيه او تسعمل ورقة و قلم
+                لا يهم المهم هو ان تحاول وحدك
+            </p>
+            <p>
+                وهذا هو المخطط الذي سوف ابني عليه البرنامج الخاص بي:
+            </p>
+            <div class="image-container">
+                <img class="responsive-image" src="flow_chart.png">
+            </div>
+            <p>
+                اولا سوف نظهر الرسمة من ملف اخر يسمى
+                art.py
+                ثم نسأل عن اسم ثم عن قيمة المزايدة ثم نضيف هذين الاخيرين الى
+                قاموس ونسأل مرة اخري هل هناك مزايدون اخرون فاذا كانت الاجابة
+                yes
+                نقوم بمسح الشاشة ثم نعود الى سؤال الاسم والقيمة
+                واذا كانت
+                no
+                نجد اكبر قيمة في القاموس وصاحبها هو الفائز في المزاد
+            </p>
+            <p>
+                حظا موفقا وفي الدرس القادم سوف نرى الحل مع بعض.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
